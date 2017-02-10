@@ -1,0 +1,19 @@
+{
+  "name": "mayo-functions",
+  "version": "1.0.0",
+  "description": "Core Wordpress Functions for Mayo Designs Themes",
+  "main": "mayo-functions.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://randmanrjr@bitbucket.org/randmanrjr/mayo-functions.git"
+  },
+  "keywords": [
+    "Wordpress"
+  ],
+  "author": "randmanrjr",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/randmanrjr/mayo-functions#readme"
+}

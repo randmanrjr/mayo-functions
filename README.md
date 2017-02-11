@@ -10,7 +10,7 @@
 ###Install with npm
 ```bash
 $ cd ./path-to-my-project
-$ npm install git://randmanrjr@bitbucket.org/randmanrjr/mayo-functions.git --save
+$ npm install git@bitbucket.org:randmanrjr/mayo-functions.git --save
 ```
 you can omit the --save flag if you don't want to add to you package.json
 ###or
@@ -18,6 +18,6 @@ you can omit the --save flag if you don't want to add to you package.json
 ###Install with bower
 ```bash
 $ cd ./path-to-my-project
-$ bower install git://randmanrjr@bitbucket.org/randmanrjr/mayo-functions.git --save
+$ bower install git@bitbucket.org:randmanrjr/mayo-functions.git --save
 ```
 you can omit the --save flag if you don't want to add to you bower.json

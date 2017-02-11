@@ -55,9 +55,25 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
             'description'       => __('Options for Mayo Designs', 'foundationpress')
         ));
 
+	    //Create Custom section for theme colors
+	    $wp_customize->add_section('theme_colors', array(
+		    'priority'          => 1002,
+		    'panel'             => 'mayo_foundationpress_options',
+		    'title'             => __('Theme Colors', 'foundationpress'),
+		    'description'       => __('Primary and Secondary colors', 'foundationpress')
+	    ));
+
+	    //Create Custom section for Social Media Accounts
+	    $wp_customize->add_section('social_media', array(
+		    'priority'          => 1003,
+		    'panel'             => 'mayo_foundationpress_options',
+		    'title'             => __('Social Media', 'foundationpress'),
+		    'description'       => __('Social Media Accounts', 'foundationpress')
+	    ));
+
         //Create Custom section for Company Information
         $wp_customize->add_section('company_info', array(
-            'priority'          => 1002,
+            'priority'          => 1004,
             'panel'             => 'mayo_foundationpress_options',
             'title'             => __('Company Information', 'foundationpress'),
             'description'       => __('Edit Company Information', 'foundationpress')
@@ -65,7 +81,7 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
 
         //Create Custom section for Company Information
         $wp_customize->add_section('company_address', array(
-            'priority'          => 1003,
+            'priority'          => 1005,
             'panel'             => 'mayo_foundationpress_options',
             'title'             => __('Company Address', 'foundationpress'),
             'description'       => __('Edit Company Address', 'foundationpress')
@@ -73,11 +89,78 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
 
         //Create Custom section for Company Information
         $wp_customize->add_section('mailing_address', array(
-            'priority'          => 1004,
+            'priority'          => 1006,
             'panel'             => 'mayo_foundationpress_options',
             'title'             => __('Mailing Address', 'foundationpress'),
             'description'       => __('Edit Mailing Address', 'foundationpress')
         ));
+
+        //settings for theme colors
+	    $wp_customize->add_setting('primary_color', array(
+		    'type'          => 'theme_mod',
+		    'capability'    => 'edit_theme_options',
+		    'sanitize'      => 'sanitize_hex_color'
+	    ));
+
+	    $wp_customize->add_setting('secondary_color', array(
+		    'type'          => 'theme_mod',
+		    'capability'    => 'edit_theme_options',
+		    'sanitize'      => 'sanitize_hex_color'
+	    ));
+
+	    //controls for theme colors
+	    $wp_customize->add_control(new WP_Customize_Color_Control(
+	    	$wp_customize,
+		    'primary_color',
+		    array(
+		    	'label'         => __('Primary Color', 'foundationpress'),
+			    'section'       => 'theme_colors',
+			    'settings'      => 'primary_color'
+		    )
+	    ));
+	    $wp_customize->add_control(new WP_Customize_Color_Control(
+		    $wp_customize,
+		    'secondary_color',
+		    array(
+			    'label'         => __('Secondary Color', 'foundationpress'),
+			    'section'       => 'theme_colors',
+			    'settings'      => 'secondary_color'
+		    )
+	    ));
+
+        //settings for Social Media Accounts
+	    $wp_customize->add_setting('social_facebook', array(
+	    	'type'          => 'theme_mod',
+		    'capability'    => 'edit_theme_options',
+		    'sanitize'      => 'esc_url'
+	    ));
+	    $wp_customize->add_setting('social_twitter', array(
+		    'type'          => 'theme_mod',
+		    'capability'    => 'edit_theme_options',
+		    'sanitize'      => 'esc_url'
+	    ));
+	    $wp_customize->add_setting('social_linkedin', array(
+		    'type'          => 'theme_mod',
+		    'capability'    => 'edit_theme_options',
+		    'sanitize'      => 'esc_url'
+	    ));
+
+		//social media controls
+	    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'social_facebook', array(
+		    'label'             => __('Facebook:', 'foundationpress'),
+		    'section'           => 'social_media',
+		    'settings'          => 'social_facebook'
+	    )));
+	    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'social_twitter', array(
+		    'label'             => __('Twitter:', 'foundationpress'),
+		    'section'           => 'social_media',
+		    'settings'          => 'social_twitter'
+	    )));
+	    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'social_linkedin', array(
+		    'label'             => __('Linkedin:', 'foundationpress'),
+		    'section'           => 'social_media',
+		    'settings'          => 'social_linkedin'
+	    )));
 
         //settings for Company Information
         $wp_customize->add_setting('company_street');
@@ -95,7 +178,7 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
         $wp_customize->add_setting('info_email');
         $wp_customize->add_setting('office_hours');
 
-
+		//company info controls
         $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'company_street', array(
             'label'             => __('Street:', 'foundationpress'),
             'section'           => 'company_address',

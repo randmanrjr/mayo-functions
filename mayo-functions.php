@@ -5,6 +5,7 @@
  */
 
 //Theme customizer configuration
+require_once ('includes/classes/Mayo.class.customizer.php');
 require_once ('includes/mayo-customizer.php');
 
 //custom meta boxes

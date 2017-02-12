@@ -10,7 +10,8 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
     function mayo_theme_customizer( $wp_customize ) {
         //Create custom section for logo upload
         $wp_customize->add_section( 'main_site_logo', array(
-                'priority'          => 2000,
+                'priority'          => 1000,
+                'panel'             => 'mayo_foundationpress_options',
                 'title'             => __( 'Site logo', 'foundationpress' ),
                 'description'       => __( 'Upload the site logo', 'foundationpress' )
             )
@@ -30,7 +31,8 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
 
         //Create custom section for site background image
         $wp_customize->add_section('site_background_image', array(
-                'priority'          => 2001,
+                'priority'          => 1001,
+                'panel'             => 'mayo_foundationpress_options',
                 'title'             => __('Site Background', 'foundationpress'),
                 'description'       => __('Upload a background image for the site', 'foundationpress')
             )

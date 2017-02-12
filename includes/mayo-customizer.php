@@ -150,19 +150,19 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
 		    'label'             => __('Facebook', 'foundationpress'),
 		    'section'           => 'social_media',
 		    'settings'          => 'social_facebook',
-            'fa_string'         => 'fa fa-facebook'
+            'fa_string'         => 'fa fa-facebook-square'
 	    )));
 	    $wp_customize->add_control(new Mayo_Social_Media_Customizer_Control($wp_customize, 'social_twitter', array(
 		    'label'             => __('Twitter', 'foundationpress'),
 		    'section'           => 'social_media',
 		    'settings'          => 'social_twitter',
-            'fa_string'         => 'fa fa-twitter'
+            'fa_string'         => 'fa fa-twitter-square'
 	    )));
 	    $wp_customize->add_control(new Mayo_Social_Media_Customizer_Control($wp_customize, 'social_linkedin', array(
 		    'label'             => __('Linkedin', 'foundationpress'),
 		    'section'           => 'social_media',
 		    'settings'          => 'social_linkedin',
-            'fa_string'         => 'fa fa-linkedin'
+            'fa_string'         => 'fa fa-linkedin-square'
 	    )));
 
         //settings for Company Information

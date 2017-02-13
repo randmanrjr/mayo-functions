@@ -148,19 +148,19 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
 	    ));
 
 		//social media controls
-	    $wp_customize->add_control(new Mayo_Social_Media_Customizer_Control($wp_customize, 'social_facebook', array(
+	    $wp_customize->add_control(new MAYO_Social_Media_Customize_Control($wp_customize, 'social_facebook', array(
 		    'label'             => __('Facebook', 'foundationpress'),
 		    'section'           => 'social_media',
 		    'settings'          => 'social_facebook',
             'fa_string'         => 'fa fa-facebook-square'
 	    )));
-	    $wp_customize->add_control(new Mayo_Social_Media_Customizer_Control($wp_customize, 'social_twitter', array(
+	    $wp_customize->add_control(new MAYO_Social_Media_Customize_Control($wp_customize, 'social_twitter', array(
 		    'label'             => __('Twitter', 'foundationpress'),
 		    'section'           => 'social_media',
 		    'settings'          => 'social_twitter',
             'fa_string'         => 'fa fa-twitter-square'
 	    )));
-	    $wp_customize->add_control(new Mayo_Social_Media_Customizer_Control($wp_customize, 'social_linkedin', array(
+	    $wp_customize->add_control(new MAYO_Social_Media_Customize_Control($wp_customize, 'social_linkedin', array(
 		    'label'             => __('Linkedin', 'foundationpress'),
 		    'section'           => 'social_media',
 		    'settings'          => 'social_linkedin',

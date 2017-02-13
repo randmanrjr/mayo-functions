@@ -1,6 +1,6 @@
 <?php
 if ( class_exists( 'WP_Customize_Control') ) :
-class Mayo_Social_Media_Customizer_Control extends WP_Customize_Control {
+class MAYO_Social_Media_Customize_Control extends WP_Customize_Control {
 
     public $type = 'url';
 

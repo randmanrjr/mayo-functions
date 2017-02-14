@@ -233,9 +233,9 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
         )));
 
         $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'company_phone_num', array(
-            'label'             => __('Portsmouth Phone Number:', 'foundationpress'),
+            'label'             => __('Company Phone Number:', 'foundationpress'),
             'section'           => 'company_info',
-            'settings'          => 'company_phone_num_port'
+            'settings'          => 'company_phone_num'
         )));
 
         $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'company_800_num', array(

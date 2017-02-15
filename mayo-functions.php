@@ -14,6 +14,9 @@ require_once ('includes/mayo-meta-boxes.php');
 //custom shortcodes
 require_once ('includes/mayo-shortcodes.php');
 
+//utility functions
+require_once ( 'includes/mayo-utilities.php' );
+
 //additional image sizes
 add_image_size('double_thumb', 300, 300, true);
 

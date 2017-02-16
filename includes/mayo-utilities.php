@@ -36,15 +36,15 @@ if ( ! function_exists('mayo_get_social_media_icon_list')) {
         echo '<ul class="social-icons">';
         if (!empty($fb)) {
             ($sq ? $fa_fb = 'fa-facebook-square' : $fa_fb = 'fa-facebook');
-            echo '<li><a href="' . $fb . '"><i class="fa ' . $fa_fb . '"></i></a>';
+            echo '<li><a href="' . $fb . '" target="_blank"><i class="fa ' . $fa_fb . '"></i></a>';
         }
         if (!empty($tw)) {
             ($sq ? $fa_tw = 'fa-twitter-square' : $fa_tw = 'fa-twitter');
-            echo '<li><a href="' . $tw . '"><i class="fa ' . $fa_tw . '"></i></a>';
+            echo '<li><a href="' . $tw . '" target="_blank"><i class="fa ' . $fa_tw . '"></i></a>';
         }
         if (!empty($lin)) {
             ($sq ? $fa_lin = 'fa-linkedin-square' : $fa_lin = 'fa-linkedin');
-            echo '<li><a href="' . $lin . '"><i class="fa ' . $fa_lin . '"></i></a>';
+            echo '<li><a href="' . $lin . '" target="_blank"><i class="fa ' . $fa_lin . '"></i></a>';
         }
         echo '</ul>';
             if ($li) { echo '</li>'; }

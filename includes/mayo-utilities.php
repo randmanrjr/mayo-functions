@@ -21,13 +21,18 @@ if ( ! function_exists('mayo_get_full_address')) {
 
 if ( ! function_exists('mayo_get_social_media_icon_list')) {
 
-    function mayo_get_social_media_icon_list ($sq = true) {
+    // Params
+    // $sq boolean square fa icons
+    // $li boolean wrap in <li>
+
+    function mayo_get_social_media_icon_list ($sq = true, $li = false) {
 
         $fb = get_theme_mod('social_facebook');
         $tw = get_theme_mod('social_twitter');
         $lin = get_theme_mod('social_linkedin');
 
         if ($fb || $tw || $lin) :
+            if ($li) { echo '<li>'; }
         echo '<ul class="social-icons">';
         if (!empty($fb)) {
             ($sq ? $fa_fb = 'fa-facebook-square' : $fa_fb = 'fa-facebook');
@@ -42,6 +47,7 @@ if ( ! function_exists('mayo_get_social_media_icon_list')) {
             echo '<li><a href="' . $lin . '"><i class="fa ' . $fa_lin . '"></i></a>';
         }
         echo '</ul>';
+            if ($li) { echo '</li>'; }
         endif;
     }
 

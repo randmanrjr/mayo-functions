@@ -1,6 +1,7 @@
 <?php
 
 if ( ! function_exists('mayo_get_full_address')) {
+
     function mayo_get_full_address () {
 
         $company_street = sanitize_text_field(get_theme_mod('company_street'));
@@ -16,4 +17,32 @@ if ( ! function_exists('mayo_get_full_address')) {
             return null;
         }
     }
+}
+
+if ( ! function_exists('mayo_get_social_media_icon_list')) {
+
+    function mayo_get_social_media_icon_list ($sq = true) {
+
+        $fb = get_theme_mod('social_facebook');
+        $tw = get_theme_mod('social_twitter');
+        $lin = get_theme_mod('social_linkedin');
+
+        if ($fb || $tw || $lin) :
+        echo '<ul class="social-icons">';
+        if (!empty($fb)) {
+            ($sq ? $fa_fb = 'fa-facebook-square' : $fa_fb = 'fa-facebook');
+            echo '<li><a href="' . $fb . '"><i class="fa ' . $fa_fb . '"></i></a>';
+        }
+        if (!empty($tw)) {
+            ($sq ? $fa_tw = 'fa-twitter-square' : $fa_tw = 'fa-twitter');
+            echo '<li><a href="' . $tw . '"><i class="fa ' . $fa_tw . '"></i></a>';
+        }
+        if (!empty($lin)) {
+            ($sq ? $fa_lin = 'fa-linkedin-square' : $fa_lin = 'fa-linkedin');
+            echo '<li><a href="' . $lin . '"><i class="fa ' . $fa_lin . '"></i></a>';
+        }
+        echo '</ul>';
+        endif;
+    }
+
 }

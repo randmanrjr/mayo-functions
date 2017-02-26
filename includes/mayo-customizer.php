@@ -146,6 +146,16 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
 		    'capability'    => 'edit_theme_options',
 		    'sanitize'      => 'esc_url'
 	    ));
+        $wp_customize->add_setting('social_google_plus', array(
+            'type'          => 'theme_mod',
+            'capability'    => 'edit_theme_options',
+            'sanitize'      => 'esc_url'
+        ));
+        $wp_customize->add_setting('social_pinterest', array(
+            'type'          => 'theme_mod',
+            'capability'    => 'edit_theme_options',
+            'sanitize'      => 'esc_url'
+        ));
 
 		//social media controls
 	    $wp_customize->add_control(new MAYO_Social_Media_Customize_Control($wp_customize, 'social_facebook', array(
@@ -166,6 +176,18 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
 		    'settings'          => 'social_linkedin',
             'fa_string'         => 'fa fa-linkedin-square'
 	    )));
+        $wp_customize->add_control(new MAYO_Social_Media_Customize_Control($wp_customize, 'social_google_plus', array(
+            'label'             => __('Linkedin', 'foundationpress'),
+            'section'           => 'social_media',
+            'settings'          => 'social_google_plus',
+            'fa_string'         => 'fa fa-google-plus-square'
+        )));
+        $wp_customize->add_control(new MAYO_Social_Media_Customize_Control($wp_customize, 'social_pinterest', array(
+            'label'             => __('Linkedin', 'foundationpress'),
+            'section'           => 'social_media',
+            'settings'          => 'social_pinterest',
+            'fa_string'         => 'fa fa-pinterest-square'
+        )));
 
         //settings for Company Information
         $wp_customize->add_setting('company_street');

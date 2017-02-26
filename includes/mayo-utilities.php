@@ -30,8 +30,10 @@ if ( ! function_exists('mayo_get_social_media_icon_list')) {
         $fb = get_theme_mod('social_facebook');
         $tw = get_theme_mod('social_twitter');
         $lin = get_theme_mod('social_linkedin');
+        $gplus = get_theme_mod('social_google_plus');
+        $pin = get_theme_mod('social_pinterest');
 
-        if ($fb || $tw || $lin) :
+        if ($fb || $tw || $lin || $gplus || $pin) :
             if ($li) { echo '<li>'; }
         echo '<ul class="social-icons">';
         if (!empty($fb)) {
@@ -45,6 +47,14 @@ if ( ! function_exists('mayo_get_social_media_icon_list')) {
         if (!empty($lin)) {
             ($sq ? $fa_lin = 'fa-linkedin-square' : $fa_lin = 'fa-linkedin');
             echo '<li><a href="' . $lin . '" target="_blank"><i class="fa ' . $fa_lin . '"></i></a>';
+        }
+        if (!empty($gplus)) {
+            ($sq ? $fa_gplus = 'fa-google-plus-square' : $fa_gplus = 'fa-google-plus');
+            echo '<li><a href="' . $gplus . '" target="_blank"><i class="fa ' . $fa_gplus . '"></i></a>';
+        }
+        if (!empty($pin)) {
+            ($sq ? $fa_pin = 'fa-pinterest-square' : $fa_pin = 'fa-pinterest');
+            echo '<li><a href="' . $pin . '" target="_blank"><i class="fa ' . $fa_pin . '"></i></a>';
         }
         echo '</ul>';
             if ($li) { echo '</li>'; }

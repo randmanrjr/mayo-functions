@@ -177,13 +177,13 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
             'fa_string'         => 'fa fa-linkedin-square'
 	    )));
         $wp_customize->add_control(new MAYO_Social_Media_Customize_Control($wp_customize, 'social_google_plus', array(
-            'label'             => __('Linkedin', 'foundationpress'),
+            'label'             => __('Google +', 'foundationpress'),
             'section'           => 'social_media',
             'settings'          => 'social_google_plus',
             'fa_string'         => 'fa fa-google-plus-square'
         )));
         $wp_customize->add_control(new MAYO_Social_Media_Customize_Control($wp_customize, 'social_pinterest', array(
-            'label'             => __('Linkedin', 'foundationpress'),
+            'label'             => __('Pinterest', 'foundationpress'),
             'section'           => 'social_media',
             'settings'          => 'social_pinterest',
             'fa_string'         => 'fa fa-pinterest-square'

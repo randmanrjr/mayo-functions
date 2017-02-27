@@ -32,6 +32,7 @@ if ( ! function_exists('mayo_get_social_media_icon_list')) {
         $lin = get_theme_mod('social_linkedin');
         $gplus = get_theme_mod('social_google_plus');
         $pin = get_theme_mod('social_pinterest');
+        $yt = get_theme_mod('social_youtube');
 
         if ($fb || $tw || $lin || $gplus || $pin) :
             if ($li) { echo '<li>'; }
@@ -51,6 +52,10 @@ if ( ! function_exists('mayo_get_social_media_icon_list')) {
         if (!empty($gplus)) {
             ($sq ? $fa_gplus = 'fa-google-plus-square' : $fa_gplus = 'fa-google-plus');
             echo '<li><a href="' . $gplus . '" target="_blank"><i class="fa ' . $fa_gplus . '"></i></a>';
+        }
+        if (!empty($yt)) {
+            ($sq ? $fa_yt = 'fa-youtube-square' : $fa_yt = 'fa-youtube');
+            echo '<li><a href="' . $yt . '" target="_blank"><i class="fa ' . $fa_yt . '"></i></a>';
         }
         if (!empty($pin)) {
             ($sq ? $fa_pin = 'fa-pinterest-square' : $fa_pin = 'fa-pinterest');

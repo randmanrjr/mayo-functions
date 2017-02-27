@@ -156,6 +156,11 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
             'capability'    => 'edit_theme_options',
             'sanitize'      => 'esc_url'
         ));
+        $wp_customize->add_setting('social_youtube', array(
+            'type'          => 'theme_mod',
+            'capability'    => 'edit_theme_options',
+            'sanitize'      => 'esc_url'
+        ));
 
 		//social media controls
 	    $wp_customize->add_control(new MAYO_Social_Media_Customize_Control($wp_customize, 'social_facebook', array(
@@ -187,6 +192,12 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
             'section'           => 'social_media',
             'settings'          => 'social_pinterest',
             'fa_string'         => 'fa fa-pinterest-square'
+        )));
+        $wp_customize->add_control(new MAYO_Social_Media_Customize_Control($wp_customize, 'social_youtube', array(
+            'label'             => __('Youtube', 'foundationpress'),
+            'section'           => 'social_media',
+            'settings'          => 'social_youtube',
+            'fa_string'         => 'fa fa-youtube-square'
         )));
 
         //settings for Company Information

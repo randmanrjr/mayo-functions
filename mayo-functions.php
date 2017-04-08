@@ -17,21 +17,14 @@ require_once ('includes/mayo-shortcodes.php');
 //utility functions
 require_once ( 'includes/mayo-utilities.php' );
 
+//menus
+require_once ( 'includes/mayo-menus.php');
+
 //additional image sizes
 add_image_size('double_thumb', 300, 300, true);
 
-//Additional menus
-add_action( 'init', 'register_my_menu' );
 
 add_action('sidebar_nav','sidebar_nav');
-
-if (! function_exists('register_my_menu')) {
-    function register_my_menu () {
-        register_nav_menus(array(
-            'footer-nav' => __('Footer Navigation')
-        ));
-    }
-}
 
 //insert sidebar navigation
 if (! function_exists('sidebar_nav')) {

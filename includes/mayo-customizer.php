@@ -136,6 +136,11 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
 		    'capability'    => 'edit_theme_options',
 		    'sanitize'      => 'esc_url'
 	    ));
+	    $wp_customize->add_setting('social_instagram', array(
+		    'type'          => 'theme_mod',
+		    'capability'    => 'edit_theme_options',
+		    'sanitize'      => 'esc_url'
+	    ));
 	    $wp_customize->add_setting('social_twitter', array(
 		    'type'          => 'theme_mod',
 		    'capability'    => 'edit_theme_options',
@@ -168,6 +173,12 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
 		    'section'           => 'social_media',
 		    'settings'          => 'social_facebook',
             'fa_string'         => 'fa fa-facebook-square'
+	    )));
+	    $wp_customize->add_control(new MAYO_Social_Media_Customize_Control($wp_customize, 'social_instagram', array(
+		    'label'             => __('Instagram', 'foundationpress'),
+		    'section'           => 'social_media',
+		    'settings'          => 'social_instagram',
+		    'fa_string'         => 'fa fa-instagram-square'
 	    )));
 	    $wp_customize->add_control(new MAYO_Social_Media_Customize_Control($wp_customize, 'social_twitter', array(
 		    'label'             => __('Twitter', 'foundationpress'),

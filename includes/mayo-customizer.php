@@ -178,7 +178,7 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
 		    'label'             => __('Instagram', 'foundationpress'),
 		    'section'           => 'social_media',
 		    'settings'          => 'social_instagram',
-		    'fa_string'         => 'fa fa-instagram-square'
+		    'fa_string'         => 'fa fa-instagram'
 	    )));
 	    $wp_customize->add_control(new MAYO_Social_Media_Customize_Control($wp_customize, 'social_twitter', array(
 		    'label'             => __('Twitter', 'foundationpress'),

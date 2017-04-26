@@ -28,18 +28,23 @@ if ( ! function_exists('mayo_get_social_media_icon_list')) {
     function mayo_get_social_media_icon_list ($sq = true, $li = false) {
 
         $fb = get_theme_mod('social_facebook');
+        $insta = get_theme_mod('social_instagram');
         $tw = get_theme_mod('social_twitter');
         $lin = get_theme_mod('social_linkedin');
         $gplus = get_theme_mod('social_google_plus');
         $pin = get_theme_mod('social_pinterest');
         $yt = get_theme_mod('social_youtube');
 
-        if ($fb || $tw || $lin || $gplus || $pin) :
+        if ($fb || $insta || $tw || $lin || $gplus || $pin) :
             if ($li) { echo '<li>'; }
         echo '<ul class="social-icons">';
         if (!empty($fb)) {
             ($sq ? $fa_fb = 'fa-facebook-square' : $fa_fb = 'fa-facebook');
             echo '<li><a href="' . $fb . '" target="_blank"><i class="fa ' . $fa_fb . '"></i></a>';
+        }
+        if (!empty($insta)) {
+	        ($fa_insta = 'fa-instagram');
+	        echo '<li><a href="' . $insta . '" target="_blank"><i class="fa ' . $fa_insta . '"></i></a>';
         }
         if (!empty($tw)) {
             ($sq ? $fa_tw = 'fa-twitter-square' : $fa_tw = 'fa-twitter');

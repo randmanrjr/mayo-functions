@@ -1,6 +1,6 @@
 {
   "name": "mayo-functions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Core Wordpress Functions for Mayo Designs Themes",
   "main": "mayo-functions.php",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://randmanrjr@bitbucket.org/randmanrjr/mayo-functions.git"
+    "url": "git+https://randmanrjr@bitbucket.org/randmanrjr/mayo-functions.git#understrap"
   },
   "keywords": [
     "Wordpress"

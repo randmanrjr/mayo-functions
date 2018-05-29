@@ -10,7 +10,7 @@
 ###Install with npm
 ```bash
 $ cd ./path-to-my-project
-$ npm install git@github.com:randmanrjr/mayo-functions.git#understrap --save
+$ npm install git://github.com/randmanrjr/mayo-functions.git#understrap --save
 ```
 you can omit the --save flag if you don't want to add to your package.json
 
@@ -19,6 +19,6 @@ you can omit the --save flag if you don't want to add to your package.json
 ###Install with bower
 ```bash
 $ cd ./path-to-my-project
-$ bower install git@github.com:randmanrjr/mayo-functions.git#understrap --save
+$ bower install git://github.com/randmanrjr/mayo-functions.git#understrap --save
 ```
 you can omit the --save flag if you don't want to add to your bower.json

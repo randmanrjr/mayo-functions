@@ -72,3 +72,16 @@ if ( ! function_exists('mayo_get_social_media_icon_list')) {
     }
 
 }
+
+//check for child pages
+if (! function_exists('post_have_children')) {
+	function post_have_children($id){
+		$children = get_pages('child_of='.$id);
+		if(count($children) == 0){
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+}

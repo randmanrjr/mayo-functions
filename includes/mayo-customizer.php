@@ -49,13 +49,13 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
         );
 
         //setting for site background image
-        $wp_customize->add_setting('background_image');
+        $wp_customize->add_setting('main_background_image');
 
         //Add option to upload the main background image
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'background_image', array(
                     'label'             => __('Main site backgound image', $text_domain),
                     'section'           => 'site_background_image',
-                    'settings'          => 'background_image'
+                    'settings'          => 'main_background_image'
                 )
             )
         );

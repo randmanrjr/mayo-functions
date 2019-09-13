@@ -46,3 +46,5 @@ if (! function_exists('post_have_children')) {
     }
 }
 
+// Adding excerpt for pages
+add_post_type_support( 'page', 'excerpt' );

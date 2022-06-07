@@ -203,10 +203,10 @@ if (! function_exists( 'mayo_theme_customizer' ) ):
             'fa_string'         => 'fa fa-linkedin-square'
 	    )));
         $wp_customize->add_control(new MAYO_Social_Media_Customize_Control($wp_customize, 'social_google_plus', array(
-            'label'             => __('Google +', $text_domain),
+            'label'             => __('Google', $text_domain),
             'section'           => 'social_media',
             'settings'          => 'social_google_plus',
-            'fa_string'         => 'fa fa-google-plus-square'
+            'fa_string'         => 'fa fa-google'
         )));
         $wp_customize->add_control(new MAYO_Social_Media_Customize_Control($wp_customize, 'social_pinterest', array(
             'label'             => __('Pinterest', $text_domain),

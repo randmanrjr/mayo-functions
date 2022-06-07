@@ -55,7 +55,7 @@ if ( ! function_exists('mayo_get_social_media_icon_list')) {
             echo '<li><a href="' . $lin . '" target="_blank"><i class="fa ' . $fa_lin . '"></i></a>';
         }
         if (!empty($gplus)) {
-            ($sq ? $fa_gplus = 'fa-google-plus-square' : $fa_gplus = 'fa-google-plus');
+            ($sq ? $fa_gplus = 'fa-google' : $fa_gplus = 'fa-google');
             echo '<li><a href="' . $gplus . '" target="_blank"><i class="fa ' . $fa_gplus . '"></i></a>';
         }
         if (!empty($yt)) {
